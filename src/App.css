@@ -1,4 +1,53 @@
 * {
   margin: 0;
   padding: 0;
+  --padding: 15px;
+  --border: 2px solid rgb(0, 0, 0);
+}
+
+:root {
+  background-color: aquamarine;
+}
+
+#editor {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 500px;
+  background-color: rgb(19, 199, 139);
+  padding-top: 3px;
+  border: var(--border);;
+  margin-top: 40px;
+}
+
+#editor h3 {
+  padding-left: 10px;
+  padding-bottom: 3px;
+  border-bottom: var(--border);;
+}
+
+#editor textarea {
+  overflow: auto;
+  padding: var(--padding);;
+  height: 250px;
+}
+
+#preview {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 680px;
+  background-color: rgb(19, 199, 139);
+  padding-top: 3px;
+  border: var(--border);;
+  margin-top: 40px;
+}
+
+#preview-box {
+  background-color: white;
+  min-height: 120px;
+  border-top: var(--border);;
+  padding: var(--padding);;
 }
