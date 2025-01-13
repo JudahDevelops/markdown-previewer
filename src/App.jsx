@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import React, { Component } from 'react';
 import './App.css'
-import marked from 'marked'
+import { marked, Marked } from 'marked';
 
 class App extends React.Component {
   render() {
@@ -26,12 +26,13 @@ class MarkdownCompiler extends React.Component {
 
   render() {
 
-    const htmlContent = marked(this.state.input);
+    const htmlContent = marked(this.state.input)
 
     return (
       <>
         <Editor input={this.state.input} onChange={this.handleChange}/>
-        <Previewer htmlContent={htmlContent}/>
+        <Previewer content={htmlContent}/>
+
       </>
     )
   }
@@ -72,10 +73,7 @@ class Previewer extends React.Component {
       <div id='preview'>
         <h3>Previewer</h3>
         <div id="preview-box" 
-        dangerouslySetInnerHTML={{
-          __html: this.props.htmlContent, // Render HTML
-        }}
-        ></div>
+        dangerouslySetInnerHTML={{__html: this.props.content}}></div>
       </div>
     )
   }

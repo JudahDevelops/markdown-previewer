@@ -43,11 +43,17 @@
   padding-top: 3px;
   border: var(--border);;
   margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+#preview h3 {
+  padding-left: 10px;
+  padding-bottom: 3px;
 }
 
 #preview-box {
   background-color: white;
   min-height: 120px;
   border-top: var(--border);;
-  padding: var(--padding);;
+  padding: 20px 40px;
 }
